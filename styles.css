@@ -37,6 +37,20 @@ nav ul li a:hover {
     background-color: #388E3C;
 }
 
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header-content img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
 section {
     padding: 20px;
     margin: 20px auto;
@@ -65,4 +79,8 @@ ul li {
 ul li strong {
     display: block;
     color: #4CAF50;
+}
+
+p {
+    margin: 10px 0;
 }
