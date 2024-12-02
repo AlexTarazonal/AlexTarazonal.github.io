@@ -1,117 +1,337 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portafolio de Alexander Tarazona</title>
-    <link rel="stylesheet" href="styles.css">
-    <meta name="description" content="Portafolio de Alexander Tarazona, estudiante de Ingeniería de Sistemas con experiencia en desarrollo de software y atención al cliente.">
-    <meta name="keywords" content="Alexander Tarazona, Ingeniería de Sistemas, Portafolio, Desarrollo de Software, Proyectos, Certificaciones">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">Acerca de Mí</a></li>
-                <li><a href="#education">Educación</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#experience">Experiencia</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#certifications">Certificaciones</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
-        </nav>
-        <div class="header-content">
-            <img src="ruta/a/tu/foto.jpg" alt="Foto de Alexander Tarazona" class="profile-picture">
-            <div>
-                <h1>Alexander Tarazona</h1>
-                <p>Estudiante de Ingeniería de Sistemas</p>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Portafolio de Alexander Tarazona, estudiante de Ingeniería de Sistemas con experiencia en desarrollo de software y atención al cliente."
+    />
+    <meta
+      name="keywords"
+      content="Alexander Tarazona, Ingeniería de Sistemas, Portafolio, Desarrollo de Software, Proyectos, Certificaciones"
+    />
+  </head>
+  <body>
+    <header class="header">
+        <div class="header__content">
+          <div class="header__logo-container">
+            <div class="header__logo-img-cont">
+              <img
+                src="image/mi-foto.jpg"
+                alt="Ram Maheshwari Logo Image"
+                class="header__logo-img"
+              />
             </div>
+            <span class="header__logo-sub">Alexander Tarazona</span>
+          </div>
+          <div class="header__main">
+            <ul class="header__links">
+              <li class="header__link-wrapper">
+                <a href="./index.html" class="header__link"> Home </a>
+              </li>
+              <li class="header__link-wrapper">
+                <a href="./index.html#about" class="header__link">Acerca de Mí </a>
+              </li>
+              <li class="header__link-wrapper">
+                <a href="./index.html#experience" class="header__link">
+                    Experiencia Laboral
+                </a>
+              </li>
+              <li class="header__link-wrapper">
+                <a href="./index.html#contact" class="header__link"> Proyectos </a>
+              </li>
+              <li class="header__link-wrapper">
+                <a href="./index.html#education" class="header__link"> Educación </a>
+              </li>
+              <li class="header__link-wrapper">
+                <a href="./index.html#contact" class="header__link"> Contacto </a>
+              </li>
+              <li class="header__link-wrapper">
+                <a href="./index.html#certifications" class="header__link"> Certificaciones </a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </header>
-    <section id="about">
-        <h2>Acerca de Mí</h2>
-        <p>Soy un apasionado Desarrollador de Software con una sólida formación en Ingeniería de Sistemas y una especialización en desarrollo web y desarrollo de software. Con una experiencia que abarca múltiples tecnologías y lenguajes de programación me esfuerzo por crear soluciones eficientes y robustas que cumplan con las necesidades del usuario final.</p>
-        <p>Mi experiencia en desarrollo web se centra en la creación de aplicaciones interactivas y dinámicas utilizando tecnologías como React y Node.js lo que me permite desarrollar tanto el frontend como el backend de aplicaciones. Además tengo un conocimiento profundo en la gestión de bases de datos relacionales como MySQL garantizando la integridad y eficiencia en el manejo de datos.</p>
-        <p>He trabajado con diversas herramientas de desarrollo incluyendo Git y GitHub para el control de versiones y entornos de desarrollo integrados como Visual Studio Code y Eclipse. Mi conocimiento de metodologías ágiles como Scrum me ha permitido colaborar eficazmente en equipos multidisciplinarios asegurando la entrega oportuna de proyectos de alta calidad.</p>
-        <p>Mi enfoque profesional se destaca por mi capacidad para analizar y resolver problemas complejos así como por mi habilidad para adaptarme rápidamente a nuevas tecnologías y entornos. Soy una persona autodidacta y proactiva siempre en busca de nuevos desafíos y oportunidades para aprender y crecer.</p>
-        <p>Estoy convencido de que mi combinación de habilidades técnicas, experiencia en desarrollo de software y actitud positiva hacen de mí un recurso valioso para cualquier equipo de desarrollo. Estoy entusiasmado por la oportunidad de contribuir al éxito de su proyecto y de seguir creciendo profesionalmente en el apasionante mundo del desarrollo de software.</p>
+      </header>
+
+    <section class="home-hero">
+        <div class="home-hero__content">
+          <h1 class="heading-primary">Hey, My name is John Doe</h1>
+          <div class="home-hero__info">
+            <p class="text-primary">
+                Desarrollador de software apasionado por la tecnología y la innovación, siempre en busca de nuevos retos.
+            </p>
+          </div>
+          <div class="home-hero__cta">
+            <a href="./#projects" class="btn btn--bg">Proyecto</a>
+          </div>
+        </div>
+      <div class="home-hero__socials">
+        <div class="home-hero__social">
+          <a href="#" class="home-hero__social-icon-link">
+            <img
+              src="png/linkedin-ico.png"
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+        <div class="home-hero__social">
+          <a href="#" class="home-hero__social-icon-link">
+            <img
+              src="png/github-ico.png"
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+      <div class="home-hero__mouse-scroll-cont">
+        <div class="mouse"></div>
+      </div>
     </section>
-    <section id="education">
-        <h2>Educación</h2>
-        <ul>
-            <li><strong>Universidad Privada del Norte (UPN)</strong> - 2020 a la fecha
-                <p>Facultad de Ingeniería de Sistemas Computacionales. Alumno de 8vo ciclo – Tercio superior</p>
-            </li>
-        </ul>
+
+    <section id="about" class="about sec-pad">
+        <div class="main-container">
+          <h2 class="heading heading-sec heading-sec__mb-med">
+            <span class="heading-sec__main">Acerca de Mí</span>
+          </h2>
+          <div class="about__content">
+            <div class="about__content-main">
+              <h3 class="about__content-title">Conóceme!</h3>
+              <div class="about__content-details">
+                <div class="about__content-details">
+                    <p class="about__content-details-para">
+                      Soy un apasionado Desarrollador de Software con más de 1 año de experiencia
+                      en el ámbito del desarrollo web y backend. Mi experiencia abarca
+                      diversas tecnologías, incluyendo React, Node.js, Angular, PHP, y
+                      Laravel. Actualmente manejo bases de datos como MySQL, SQL Server y
+                      MongoDB, y tengo planes futuros de aprender Java para ampliar mis
+                      habilidades. He trabajado en proyectos que involucran la creación y
+                      mantenimiento de aplicaciones web, utilizando metodologías ágiles y
+                      herramientas modernas de desarrollo. Además, tengo conocimientos en la
+                      integración de APIs y el diseño de interfaces de usuario. Mi enfoque en
+                      el trabajo se destaca por mi capacidad analítica y colaborativa. Soy una
+                      persona autodidacta y proactiva que disfruta enfrentando nuevos
+                      desafíos. Mi amor por la tecnología se extiende más allá del desarrollo
+                      de software, ya que también me apasiona aprender constantemente y
+                      mejorar mis habilidades técnicas. Estoy convencido de que mi combinación
+                      de habilidades técnicas y actitud positiva hacen de mí un recurso
+                      valioso para cualquier equipo de desarrollo. ¡Espero poder contribuir al
+                      éxito de su proyecto!
+                    </p>
+                  </div>                  
+              </div>
+              <a href="./#contact" class="btn btn--med btn--theme dynamicBgClr"
+                >Contact</a
+              >
+            </div>
+            <div class="about__content-skills">
+              <h3 class="about__content-title">My Skills</h3>
+              <div class="skills">
+                <div class="skills__skill">HTML</div>
+                <div class="skills__skill">CSS</div>
+                <div class="skills__skill">JavaScript</div>
+                <div class="skills__skill">React</div>
+                <div class="skills__skill">SASS</div>
+                <div class="skills__skill">GIT</div>
+                <div class="skills__skill">Shopify</div>
+                <div class="skills__skill">Wordpress</div>
+                <div class="skills__skill">Google ADS</div>
+                <div class="skills__skill">Facebook Ads</div>
+                <div class="skills__skill">Android</div>
+                <div class="skills__skill">IOS</div>
+              </div>
+            </div>
+          </div>
+        </div>
     </section>
-    <section id="skills">
-        <h2>Habilidades</h2> 
-        <ul>
-            <li><strong>Lenguajes de Programación:</strong> Java, Python, C++, JavaScript</li>
-            <li><strong>Desarrollo Web:</strong> HTML, CSS, React, Node.js</li>
-            <li><strong>Bases de Datos:</strong> SQL, MySQL</li>
-            <li><strong>Sistemas Operativos:</strong> Windows, Linux</li>
-            <li><strong>Herramientas de Desarrollo:</strong> Git, GitHub, Visual Studio Code, Eclipse</li>
-            <li><strong>Metodologías de Desarrollo:</strong> Scrum</li>
-            <li><strong>Microsoft Office:</strong> Nivel Intermedio (Word, Excel, PowerPoint)</li>
-        </ul>
+    <section id="projects" class="projects sec-pad">
+        <div class="main-container">
+          <h2 class="heading heading-sec heading-sec__mb-bg">
+            <span class="heading-sec__main">Projects</span>
+          </h2>
+  
+          <div class="projects__content">
+            <div class="projects__row">
+              <div class="projects__row-img-cont">
+                <img
+                  src="jpg/project-mockup-example.jpeg"
+                  alt="Software Screenshot"
+                  class="projects__row-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="projects__row-content">
+                <h3 class="projects__row-content-title">Proyecto CRUD con Node.js, Express y MySQL</h3>
+                <p class="projects__row-content-desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                  facilis tempora, explicabo quae quod deserunt eius sapiente
+                  praesentium.
+                </p>
+                <a
+                  href="https://github.com/AlexTarazonal/CRUD-NODE.JS.git"
+                  class="btn btn--med btn--theme dynamicBgClr"
+                  target="_blank"
+                  >Ver repositorio</a
+                >
+              </div>
+            </div>
+            <div class="projects__row">
+              <div class="projects__row-img-cont">
+                <img
+                  src="jpg/project-mockup-example.jpeg"
+                  alt="Software Screenshot"
+                  class="projects__row-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="projects__row-content">
+                <h3 class="projects__row-content-title">Proyecto de Gestión de Tareas</h3>
+                <p class="projects__row-content-desc">
+                    Desarrollé una aplicación web CRUD que permite Crear, Leer,
+              Actualizar y Eliminar registros en una base de datos MySQL.
+                </p>
+                <a
+                  href="https://github.com/AlexTarazonal/Gestion-de-Tareas-.git"
+                  class="btn btn--med btn--theme dynamicBgClr"
+                  target="_blank"
+                  > Ver repositorio</a
+                >
+              </div>
+            </div>
+            <div class="projects__row">
+              <div class="projects__row-img-cont">
+                <img
+                  src="jpg/project-mockup-example.jpeg"
+                  alt="Software Screenshot"
+                  class="projects__row-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="projects__row-content">
+                <h3 class="projects__row-content-title">Proyecto de Algoritmo A* con Pygame</h3>
+                <p class="projects__row-content-desc">
+                    Desarrollé una simulación del algoritmo A* utilizando Pygame para
+                    encontrar el camino más corto en una cuadrícula. La simulación
+                    visualiza el proceso de búsqueda de camino entre dos puntos en un
+                    entorno con obstáculos aleatorios.
+                </p>
+                <a
+                  href="https://github.com/AlexTarazonal/AlexanderTL-Algoritmo.git"
+                  class="btn btn--med btn--theme dynamicBgClr"
+                  target="_blank"
+                  >Ver repositorio</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
     </section>
+
     <section id="experience">
         <h2>Experiencia Laboral</h2>
         <ul>
-            <li><strong>Code Informatic Solutions</strong> - Desarrollador de Software (31/05/2023 hasta 31/05/2024)
-                <p>Somos una empresa dedicada al desarrollo de soluciones tecnológicas y consultoría en software.</p>
-                <h3>Proyectos Desarrollados:</h3>
-                <ul>
-                    <li>Desarrollo de Aplicaciones Web</li>
-                    <li>Consumo de APIs en React</li>
-                    <li>Diseño y Desarrollo de Logins en React</li>
-                    <li>Implementación de Funcionalidades con Node.js y MySQL</li>
-                </ul>
-                <h3>Descripción:</h3>
-                <p>Creación de aplicaciones web interactivas utilizando React, integrando funcionalidades avanzadas y consumo de APIs.</p>
-                <p>Diseño y desarrollo de interfaces de usuario (UI) para sistemas de autenticación y login, garantizando una experiencia de usuario fluida.</p>
-                <p>Desarrollo de servicios backend en Node.js y gestión de bases de datos con MySQL.</p>
-                <p>Implementación de metodologías ágiles Scrum para la gestión de proyectos.</p>
-                <h3>Funciones:</h3>
-                <ul>
-                    <li>Desarrollo de aplicaciones frontend con React y backend con Node.js.</li>
-                    <li>Implementación de bases de datos MySQL para el almacenamiento y gestión de datos.</li>
-                    <li>Creación y consumo de APIs para integrar servicios externos.</li>
-                    <li>Aplicación de metodologías ágiles Scrum para la planificación y ejecución de proyectos.</li>
-                    <li>Colaboración en el diseño de interfaces y funcionalidades de login en aplicaciones web.</li>
-                    <li>Mantenimiento y mejora continua de aplicaciones existentes, garantizando la calidad del software.</li>
-                </ul>
-            </li>
+          <li>
+            <strong>Code Informatic Solutions - (31/05/2023 hasta 31/05/2024)</strong>
+            <h3>Proyectos Desarrollados: SCAN Almacen, APPBUSES</h3>
+            <ul>
+              <li>- Desarrollo de Aplicaciones Web</li>
+              <li>- Consumo de APIs en React</li>
+              <li>- Diseño y Desarrollo de Logins en React</li>
+              <li>- Implementación de Funcionalidades con Node.js y MySQL</li>
+            </ul>
+            <h3>Descripción:</h3>
+            <p>
+              Creación de aplicaciones web interactivas utilizando React, integrando funcionalidades avanzadas y consumo de APIs.
+            </p>
+            <p>
+              Diseño y desarrollo de interfaces de usuario (UI) para sistemas de autenticación y login, garantizando una experiencia de usuario fluida.
+            </p>
+            <p>
+              Desarrollo de servicios backend en Node.js y gestión de bases de datos con MySQL.
+            </p>
+            <p>
+              Implementación de metodologías ágiles Scrum para la gestión de proyectos.
+            </p>
+            <h3>Funciones:</h3>
+            <ul>
+              <li>Desarrollo de aplicaciones frontend con React y backend con Node.js.</li>
+              <li>Implementación de bases de datos MySQL para el almacenamiento y gestión de datos.</li>
+              <li>Creación y consumo de APIs para integrar servicios externos.</li>
+              <li>Aplicación de metodologías ágiles Scrum para la planificación y ejecución de proyectos.</li>
+              <li>Colaboración en el diseño de interfaces y funcionalidades de login en aplicaciones web.</li>
+              <li>Mantenimiento y mejora continua de aplicaciones existentes, garantizando la calidad del software.</li>
+            </ul>
+          </li>
         </ul>
-    </section>
-    <section id="projects">
-        <h2>Proyectos</h2>
+      </section>
+      
+      <section id="education">
+        <h2>Educación</h2>
         <ul>
-            <li><strong>Aplicación Web de Gestión de Tareas</strong> - 2024
-                <p>Desarrollé una aplicación web utilizando HTML, CSS, y JavaScript para gestionar tareas diarias...</p>
-            </li>
-            <li><strong>AlexanderTL-Algoritmo</strong> - 2024
-                <p>Desarrollé y mantengo un repositorio en GitHub con una colección de algoritmos implementados en diferentes lenguajes de programación...</p>
-            </li>
+          <li>
+            <strong>Universidad Privada del Norte (UPN)</strong> - 2020 a la fecha
+            <p>Facultad de Ingeniería de Sistemas Computacionales. Alumno de 8vo ciclo – Tercio superior</p>
+            <strong>INGLES</strong>
+            <p>BASIC - SISE</p>
+          </li>
         </ul>
-    </section>
-    <section id="certifications">
-        <h2>Certificaciones</h2>
-        <ul>
-            <li><strong>Cisco Networking Academy</strong> - Get Connected (27/06/2023)
-                <p>Competencias adquiridas en identificación de diferentes tipos de computadoras, componentes internos, dispositivos externos, estructura de directorios en Microsoft Windows, navegación por internet, uso del correo electrónico, creación y uso de cuentas en redes sociales, y resolución de problemas a nivel de hardware, software y red.</p>
-            </li>
-        </ul>
-    </section>
-    <section id="contact">
+      </section>
+      
+      <section id="contact">
         <h2>Contacto</h2>
         <p>Teléfono: +51 982621474</p>
-        <p>Email: <a href="mailto:N00275636@upn.pe">N00275636@upn.pe</a> / <a href="mailto:Alex.tarazona.193@gmail.com">Alex.tarazona.193@gmail.com</a></p>
+        <p>
+          Email: <a href="mailto:N00275636@upn.pe">N00275636@upn.pe</a> /
+          <a href="mailto:Alex.tarazona.193@gmail.com">Alex.tarazona.193@gmail.com</a>
+        </p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/alex-efrain-tarazona-llashag-ba7757187/">alex-efrain-tarazona-llashag</a></p>
         <p>GitHub: <a href="https://github.com/AlexTarazonal">AlexTarazonal</a></p>
-        <p>Portafolio en GitHub Pages: <a href="https://alex.tarazona.github.io">alex.tarazona.github.io</a></p>
-    </section>
-</body>
-</html>
+      </section>
+      
+      <section id="certifications">
+        <h2>Certificaciones</h2>
+        <div class="certifications">
+          <img src="image/css certificate.png" alt="Certificado en CSS" />
+          <img src="image/javascript_basic certificate.png" alt="Certificado en JavaScript Básico" />
+          <img src="image/CSharp_CERTIFIED.png" alt="Certificado en C#" />
+          <img src="image/nodejs_basic certificate.png" alt="Certificado en Node.js Básico" />
+          <img src="image/SQL CERTIFIED.png" alt="Certificado en SQL" />
+        </div>
+      </section>
+      <footer class="main-footer">
+        <div class="main-container">
+          <div class="main-footer__upper">
+            <div class="main-footer__row main-footer__row-1">
+              <h2 class="heading heading-sm main-footer__heading-sm">
+                <span>Social</span>
+              </h2>
+              <div class="main-footer__social-cont">
+                <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/alexander-tarazona-ba7757187/">
+                  <img class="main-footer__icon" src="png/linkedin-ico.png" alt="LinkedIn" />
+                </a>
+                <a target="_blank" rel="noreferrer" href="https://github.com/AlexTarazonal">
+                  <img class="main-footer__icon" src="png/github-ico.png" alt="GitHub" />
+                </a>
+               
+              </div>
+            </div>
+            <div class="main-footer__row main-footer__row-2">
+              <h4 class="heading heading-sm text-lt">Alexander Tarazona</h4>
+              <p class="main-footer__short-desc">
+                Desarrollador de software apasionado por la tecnología y la innovación, siempre en busca de nuevos retos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
