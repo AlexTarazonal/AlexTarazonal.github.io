@@ -437,7 +437,7 @@ li {
 
 .header__links {
   display: flex;
-  gap: 2rem;
+  gap: 2.9rem;
 }
 
 .header__link-wrapper {
