@@ -1,55 +1,39 @@
-const skills = [
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'React',
-  'Node.js',
-  'Express.js',
-  'MySQL',
-  'SQL Server',
-  'Python',
-  'C++',
-  'Git',
-  'SAP HANA',
-];
+import { motion } from "framer-motion";
+import { profile } from "../data/cv";
 
 export default function About() {
   return (
-    <section id="about" className="about sec-pad">
-      <div className="main-container">
-        <h2 className="heading heading-sec heading-sec__mb-med">
-          <span className="heading-sec__main">Acerca de Mí</span>
-        </h2>
+    <section id="about" className="py-20 bg-neutral-950">
+      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-6">
+        <motion.div
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6 }}
+          className="bg-white/5 border border-white/10 rounded-2xl p-6"
+        >
+          <h2 className="text-3xl font-extrabold mb-4">Acerca de mí</h2>
+          <p className="text-neutral-200 leading-relaxed">
+            {profile.summary}
+          </p>
+        </motion.div>
 
-        <div className="about__content">
-          <div className="about__content-main">
-            <h3 className="about__content-title">Conóceme!</h3>
-            <div className="about__content-details">
-              <p className="about__content-details-para">
-                Desarrollador Full Stack con experiencia en React, Node.js y MySQL.
-                He trabajado en la creación de sistemas web eficientes para la gestión
-                de compras y ventas, optimizando el control de inventarios y la administración
-                de productos. Con conocimientos sólidos en desarrollo frontend y backend,
-                he implementado soluciones escalables y seguras, integrando autenticación con JWT
-                y manejando bases de datos con MySQL.
-              </p>
-              <p className="about__content-details-para">
-                Apasionado por la tecnología y la innovación, siempre busco mejorar mis habilidades
-                y aprender nuevas tecnologías. Tengo experiencia en proyectos personales y profesionales,
-                trabajando en equipo para resolver problemas y entregar soluciones de calidad.
-              </p>
-            </div>
-          </div>
-
-          <div className="about__content-skills">
-            <h3 className="about__content-title">Mis Habilidades</h3>
-            <div className="skills">
-              {skills.map((skill) => (
-                <div key={skill} className="skills__skill">{skill}</div>
-              ))}
-            </div>
-          </div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6, delay: 0.05 }}
+          className="bg-white/5 border border-white/10 rounded-2xl p-6"
+        >
+          <h3 className="text-xl font-bold mb-3">Datos rápidos</h3>
+          <ul className="space-y-2 text-neutral-200">
+            <li><b>Rol:</b> {profile.role}</li>
+            <li><b>Email:</b> {profile.email}</li>
+            <li><b>Teléfono:</b> {profile.phone}</li>
+            <li><b>LinkedIn:</b> <a className="text-fuchsia-300 hover:underline" href={profile.linkedin} target="_blank" rel="noreferrer">Ver perfil</a></li>
+            <li><b>GitHub:</b> <a className="text-fuchsia-300 hover:underline" href={profile.github} target="_blank" rel="noreferrer">Ver repos</a></li>
+          </ul>
+        </motion.div>
       </div>
     </section>
   );

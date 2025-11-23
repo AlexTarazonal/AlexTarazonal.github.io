@@ -1,89 +1,79 @@
-import crudImg from '../assets/proyectos/CRUD-NDOE.png';
-import gestorImg from '../assets/proyectos/GESTOR1.png';
-import astarImg from '../assets/proyectos/ALGORITMO.png';
-import conteoImg from '../assets/proyectos/algoritmo-referencia.png';
-import pokemonImg from '../assets/proyectos/pokemon-versionweb.jpg';
-import vetImg from '../assets/proyectos/happy pet care.png';
+import { motion } from "framer-motion";
+import { projects } from "../data/projects";
 
-const projects = [
-  {
-    title: 'Aplicación CRUD con Node.js, Express y MySQL',
-    desc:
-      'Creé una aplicación web que permite Crear, Leer, Actualizar y Eliminar (CRUD) registros en una base de datos MySQL. Automatizó la gestión de información para pequeños negocios, aumentando la eficiencia en un 40% al reemplazar tareas manuales por procesos automatizados.',
-    img: crudImg,
-    repo: 'https://github.com/AlexTarazonal/CRUD-NODE.JS.git',
-  },
-  {
-    title: 'Aplicación de Gestión de Tareas',
-    desc:
-      'Diseñé una aplicación web intuitiva que facilita la gestión de tareas diarias (agregar, editar, completar y eliminar). La interfaz amigable permitió a los usuarios incrementar su productividad personal, simplificando la organización de actividades.',
-    img: gestorImg,
-    repo: 'https://github.com/AlexTarazonal/Gestion-de-Tareas-.git',
-  },
-  {
-    title: 'Simulación del Algoritmo A* con Pygame',
-    desc:
-      'Implementé una simulación interactiva del algoritmo A* para encontrar el camino más corto en una cuadrícula con obstáculos. La herramienta mejora la comprensión visual del funcionamiento de algoritmos de búsqueda aplicables en planificación de rutas y desarrollo de videojuegos.',
-    img: astarImg,
-    repo: 'https://github.com/AlexTarazonal/AlexanderTL-Algoritmo.git',
-  },
-  {
-    title: 'Sistema de Conteo de Personas',
-    desc:
-      'Desarrollé un sistema integral de visión computacional para el conteo automatizado de personas, logrando una precisión del 95% en entornos comerciales y de seguridad. El sistema optimiza el análisis de flujo de personas en tiempo real, facilitando la toma de decisiones.',
-    img: conteoImg,
-    repo: 'https://github.com/AlexTarazonal/AlexanderTL-Algoritmo.git',
-  },
-  {
-    title: 'Servidor para Juego de Pokémon Multijugador (Node.js & Express)',
-    desc:
-      'Este proyecto es un servidor web creado con Node.js y Express, que permite a los jugadores unirse a un juego multijugador de Pokémon, asignar Pokémon a sus personajes, actualizar su posición en el mapa y definir ataques. Node.js maneja múltiples conexiones simultáneas para actualizaciones en tiempo real, mientras que Express facilita la gestión de rutas y la comunicación eficiente entre el servidor y los jugadores.',
-    img: pokemonImg,
-    repo: 'https://github.com/AlexTarazonal/AlexanderTL-Algoritmo.git',
-  },
-  {
-    title: 'Plataforma Web Veterinaria',
-    desc:
-      'Desarrollé una plataforma web modular que incluye una interfaz pública y un panel administrativo para la gestión eficiente de usuarios y contenido. El proyecto optimiza la experiencia del usuario mediante un diseño responsivo y accesible, mejorando tanto la usabilidad como la administración del sitio.',
-    img: vetImg,
-    repo: 'https://github.com/AlexTarazonal/web',
-  },
-];
+const wrap = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.08 } }
+};
+
+const card = {
+  hidden: { opacity: 0, y: 14 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+};
 
 export default function Projects() {
   return (
-    <section id="projects" className="projects sec-pad">
-      <div className="main-container">
-        <h2 className="heading heading-sec heading-sec__mb-bg">
-          <span className="heading-sec__main">PROYECTOS</span>
-        </h2>
+    <section id="projects" className="py-20 bg-neutral-900">
+      <div className="max-w-6xl mx-auto px-6">
+        <motion.h2
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl font-extrabold mb-8"
+        >
+          Proyectos
+        </motion.h2>
 
-        <div className="projects__content">
+        <motion.div
+          variants={wrap}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-80px" }}
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
           {projects.map((p) => (
-            <div key={p.title} className="projects__row">
-              <div className="projects__row-img-cont">
-                <img
-                  src={p.img}
-                  alt={p.title}
-                  className="projects__row-img"
-                  loading="lazy"
-                />
+            <motion.article
+              key={p.title}
+              variants={card}
+              whileHover={{ y: -6 }}
+              className="group bg-neutral-950 border border-white/10 rounded-2xl overflow-hidden shadow-xl"
+            >
+              <div className="relative">
+                <img src={p.img} alt={p.title} className="h-44 w-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition" />
               </div>
-              <div className="projects__row-content">
-                <h3 className="projects__row-content-title">{p.title}</h3>
-                <p className="projects__row-content-desc">{p.desc}</p>
-                <a
-                  href={p.repo}
-                  className="btn btn--med btn--theme dynamicBgClr"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Ver repositorio
-                </a>
+
+              <div className="p-5">
+                <h3 className="font-bold text-lg">{p.title}</h3>
+                <p className="mt-2 text-sm text-neutral-300 line-clamp-3">
+                  {p.desc}
+                </p>
+
+                <div className="mt-4 flex gap-2">
+                  <a
+                    href={p.repo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-sm px-3 py-2 rounded-lg bg-white text-black font-semibold hover:opacity-90 transition"
+                  >
+                    Repo
+                  </a>
+                  {p.demo && (
+                    <a
+                      href={p.demo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-sm px-3 py-2 rounded-lg bg-white/10 border border-white/10 hover:bg-white/15 transition"
+                    >
+                      Demo
+                    </a>
+                  )}
+                </div>
               </div>
-            </div>
+            </motion.article>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

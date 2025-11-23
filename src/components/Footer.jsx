@@ -10,7 +10,7 @@ export default function Footer() {
             <h2 className="heading heading-sm main-footer__heading-sm">
               <span>Social</span>
             </h2>
-
+                
             <div className="main-footer__social-cont">
               <a
                 target="_blank"

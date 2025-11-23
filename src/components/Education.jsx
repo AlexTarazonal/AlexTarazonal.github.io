@@ -1,36 +1,43 @@
+import { motion } from "framer-motion";
 import { education, languages } from "../data/cv";
 
 export default function Education() {
   return (
-    <section id="education" className="about sec-pad">
-      <div className="main-container">
-        <h2 className="heading heading-sec heading-sec__mb-med">
-          <span className="heading-sec__main">Educación e Idiomas</span>
-        </h2>
+    <section id="education" className="py-20 bg-neutral-900">
+      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-6">
+        <motion.div
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6 }}
+          className="bg-neutral-950 border border-white/10 rounded-2xl p-6"
+        >
+          <h2 className="text-2xl font-bold mb-4">Educación</h2>
+          {education.map(e => (
+            <div key={e.place} className="mb-3">
+              <p className="font-semibold">{e.place}</p>
+              <p className="text-neutral-300">{e.degree}</p>
+              <p className="text-neutral-400 text-sm">{e.status}</p>
+            </div>
+          ))}
+        </motion.div>
 
-        <div className="about__content">
-          <div className="about__content-main">
-            <h3 className="about__content-title">Formación Académica</h3>
-            {education.map((e) => (
-              <p key={e.place} className="about__content-details-para">
-                <strong>{e.place}</strong><br />
-                {e.degree}<br />
-                {e.status}
-              </p>
+        <motion.div
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6, delay: 0.05 }}
+          className="bg-neutral-950 border border-white/10 rounded-2xl p-6"
+        >
+          <h2 className="text-2xl font-bold mb-4">Idiomas</h2>
+          <div className="flex flex-col gap-2">
+            {languages.map(l => (
+              <div key={l.name} className="bg-white/5 border border-white/10 rounded-xl p-3">
+                {l.name} — <span className="text-neutral-300">{l.level}</span>
+              </div>
             ))}
           </div>
-
-          <div className="about__content-skills">
-            <h3 className="about__content-title">Idiomas</h3>
-            <div className="skills">
-              {languages.map((l) => (
-                <div key={l.name} className="skills__skill">
-                  {l.name} — {l.level}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
